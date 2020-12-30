@@ -20,11 +20,11 @@ class GifPagingAdapter(private val itemClickListener: ItemClickListener) :
     PagingDataAdapter<Data, GifPagingAdapter.MyViewHolder>(PHOTO_COMPARATOR) {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        //For shimmer, this does not work if put in diff class
         private val shimmer = Shimmer.AlphaHighlightBuilder()
-            .setDuration(1800) // how long the shimmering animation takes to do one full sweep
-            .setBaseAlpha(0.8f) //the alpha of the underlying children
-            .setHighlightAlpha(0.7f) // the shimmer alpha amount
+            .setDuration(1800)
+            .setBaseAlpha(0.9f)
+            .setHighlightAlpha(0.8f)
             .setDirection(Shimmer.Direction.LEFT_TO_RIGHT)
             .setAutoStart(true)
             .build()
@@ -33,15 +33,16 @@ class GifPagingAdapter(private val itemClickListener: ItemClickListener) :
         }
 
         fun bind(data: Data?) {
-            ViewCompat.setTransitionName(itemView.img_gif , data?.images?.original?.url)
-            Glide.with(itemView.context)
-                .asGif()
-                .placeholder(shimmerDrawable)
-                .load(data?.images?.fixed_height_small?.url)
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(itemView.img_gif)
-            itemView.setOnClickListener {
-                itemClickListener.onItemClick(data, itemView.img_gif)
+            itemView.img_gif.apply {
+                Glide.with(this.context)
+                    .asGif()
+                    .placeholder(shimmerDrawable)
+                    .load(data?.images?.fixed_height_small?.url)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .into(this)
+                itemView.setOnClickListener {
+                    itemClickListener.onItemClick(data, this)
+                }
             }
         }
 

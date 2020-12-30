@@ -1,13 +1,11 @@
-package com.rahul.gifbrowser.data
+package com.rahul.gifbrowser.data.remote
 
 import android.util.Log
 import androidx.paging.PagingSource
-import com.rahul.gifbrowser.data.api.GiphyApi
+import com.rahul.gifbrowser.data.remote.api.GiphyApi
 import com.rahul.gifbrowser.models.Data
-import com.rahul.gifbrowser.models.GiphyResult
 import retrofit2.HttpException
 import java.io.IOException
-import java.lang.Exception
 
 const val STARTING_PAGE_INDEX = 0
 

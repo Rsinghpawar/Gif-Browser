@@ -1,6 +1,6 @@
 package com.rahul.gifbrowser.di
 
-import com.rahul.gifbrowser.data.api.GiphyApi
+import com.rahul.gifbrowser.data.remote.api.GiphyApi
 import com.rahul.gifbrowser.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides

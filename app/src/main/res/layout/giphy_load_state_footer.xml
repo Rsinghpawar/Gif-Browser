@@ -9,7 +9,9 @@
     <ProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/custom_progress" />
 
     <TextView
         android:id="@+id/tv_error"
@@ -21,7 +23,6 @@
         android:id="@+id/btn_retry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retry"
-        />
+        android:text="Retry" />
 
 </LinearLayout>

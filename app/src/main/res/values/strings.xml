@@ -2,4 +2,9 @@
     <string name="app_name">GIF Browser</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username :</string>
+    <string name="import_date">Import Date :</string>
+    <string name="source">Source :</string>
+    <string name="rating">Rating :</string>
+    <string name="title">Title :</string>
 </resources>

@@ -7,12 +7,17 @@
     <application
         android:name=".GifApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GIFBrowser">
         <activity android:name=".ui.MainActivity">
+        </activity>
+        <activity android:name=".ui.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
+<!--            @style/Theme.AppCompat.Light.NoActionBar.FullScreen-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

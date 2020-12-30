@@ -56,11 +56,11 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
 
-    // Room components
-    implementation "androidx.room:room-runtime:2.2.5"
-    kapt "androidx.room:room-compiler:2.2.5"
-    implementation "androidx.room:room-ktx:2.2.5"
-    androidTestImplementation "androidx.room:room-testing:2.2.5"
+//    // Room components
+//    implementation "androidx.room:room-runtime:2.2.5"
+//    kapt "androidx.room:room-compiler:2.2.5"
+//    implementation "androidx.room:room-ktx:2.2.5"
+//    androidTestImplementation "androidx.room:room-testing:2.2.5"
 
 
     // Recyclerview
@@ -95,7 +95,7 @@ dependencies {
     implementation 'com.facebook.shimmer:shimmer:0.4.0'
     implementation 'com.todkars:shimmer-recyclerview:0.4.0'
 
-
+    //Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
